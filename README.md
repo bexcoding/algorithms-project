@@ -44,7 +44,7 @@ Merge sort works by splitting a list into small pieces and then sorting those pi
 
 Here is an example of sorting lists of lengths between 0 and 100,000 using the function call `plot_results(run_big_n_sorts(100_000))`:
 
-![Time required to sort lists of up to 100,000 items in length](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/mergesort-test-graph.png)
+![Time required to sort lists of up to 100,000 items in length](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/mergesort-test-graph.png)
 
 Below is a diagram of how merge sort splits all of its elements and then merges them sorted:
 
@@ -73,11 +73,11 @@ Bubble sort is a very inefficient algorithm that runs in O(n²) time and as such
 
 Below is an example of sorting lists of lengths between 0 and 10,000, which ran in about the same time as it took to run 10 times the number of tests with the merge sort:
 
-![Time for sorting 10,000 items](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/bubblesort-test-graph.png)
+![Time for sorting 10,000 items](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/bubblesort-test-graph.png)
 
 To get a better idea of how much slower bubble sort is than merge sort, here is a graph run on lists of the same length with the two algorithms. Notice how merge sort takes so little time in comparison that it appears to be a flat line:
 
-![Bubblesort vs mergesort](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/bubblesort-vs-mergesort.png)
+![Bubblesort vs mergesort](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/bubblesort-vs-mergesort.png)
 
 Below is a digram of how bubble sort works with the optimization of checking one less item per round:
 
@@ -236,7 +236,7 @@ If I run these commands in the terminal, my system doesn't show me the resulting
 
 For lists of size 40 and lower, selection sort is the fastest in the majority of cases. Insertion is second best for lists from size 0 to 35, and bubble sort is third best until the lists get greater than about 27 items long. Merge sort actually has the worst performance for most cases and ends up being barely better than insertion sort in lists of 40 items.
 
-![Graph of lists length 40 and under](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/test-all-forty.png)
+![Graph of lists length 40 and under](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/test-all-forty.png)
 
 Time (in ms) to sort with each algorithm
 
@@ -252,7 +252,7 @@ Time (in ms) to sort with each algorithm
 
 When the size of the lists expands to lists of up to 100 items, the true division of the algorithms starts to appear. Once the lists are made of 60 items or greater, merge sort is best, selection sort is second, insertion sort is third, and bubble sort is last. While merge sort is clearly the best, selection sort is still almost twice as fast at sorting 100 elements when compared to insertion sort or bubble sort.
 
-![Graph of lists length 100 and under](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/test-all-hundred.png)
+![Graph of lists length 100 and under](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/test-all-hundred.png)
 
 | List Length | Merge Sort  | Insertion Sort | Selection Sort | Bubble Sort |
 |-------------|-------------|----------------|----------------|-------------|
@@ -266,7 +266,7 @@ When the size of the lists expands to lists of up to 100 items, the true divisio
 
 Each of the four algorithms become even more separated when testing lists of lengths up to 1000 elements. Merge sort does so well that it appears to be almost a flat line at the bottom of the graph. Insertion sort and bubble sort seem to grow at nearly the same rate while selection sort performs about twice as fast as either one, no matter the size of the list.
 
-![Graph of lists length 1000 and under](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/test-all-thousand.png)
+![Graph of lists length 1000 and under](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/test-all-thousand.png)
 
 | List Length | Merge Sort | Insertion Sort | Selection Sort | Bubble Sort |
 |-------------|------------|----------------|----------------|-------------|
@@ -280,7 +280,7 @@ Each of the four algorithms become even more separated when testing lists of len
 
 All of the trends continue to get further amplified in this final test. Merge sort appears to take no time at all while bubble sort and insertion sort swell to thousands of times more time intensive. I would complete further tests but the compounding increase in the time required to run the tests would take to long to be practical. Because of the inefficient algorithms involved, even running the tests of up to 10,000 items takes over 35 seconds to complete. Also, there is no practical benefit. It is clear that the time complexity trend of these four graphs will continue indefinitely in the same fashion with merge sort being the most efficient and selection sort being the next most efficient.
 
-![Graph of lists length 10000 and under](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/test-all-ten-thousand.png)
+![Graph of lists length 10000 and under](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/test-all-ten-thousand.png)
 
 | List Length | Merge Sort | Insertion Sort | Selection Sort | Bubble Sort |
 |-------------|------------|----------------|----------------|-------------|
@@ -298,15 +298,15 @@ Using the results of the previous efficiency tests, I wrote a sorting algorithm 
 
 When testing lists of up to 40 elements, merge-select did noticeably better than merge sort:
 
-![Merge-select graph of 40 or less elements](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/mergeselect-forty.png)
+![Merge-select graph of 40 or less elements](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/mergeselect-forty.png)
 
 Then, when testing lists of up to 1000 elements, merge-select took one eighth of the time that selection sort did:
 
-![Merge-select graph of 1000 or less elements](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/mergeselect-thousand.png)
+![Merge-select graph of 1000 or less elements](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/mergeselect-thousand.png)
 
 The really interesting section to observe, however, is the narrow section of lists between 50 and 70 elements in length. In this particular graph, you can see the crossing of the three algorithms at a list size of about 62 elements. At that point, merge sort becomes more efficient than selection sort and the merge-select algorithm follows the change over and maintains optimal efficiency the whole time:
 
-![Merge-select graph of mid range](https://github.com/bexcoding/portfolio/blob/main/algorithms-project/performance-graphs/mergeselect-mid.png)
+![Merge-select graph of mid range](https://github.com/bexcoding/algorithms-project/blob/main/performance-graphs/mergeselect-mid.png)
 
 While I created an optimization that did what I set out to do and backed it up with testing, does this really make a significant difference? The answer is most likely not. Look at the results in the previous testing section above. The time for merge sort to sort a 10,000 item list was 21 milliseconds while a similar operation took 1762 milliseconds for selection sort. While this is significant, it is the difference between the results showing up in 2 seconds compared to instantaneously. Two seconds is not a lot of time savings for most applications. To see a really significant difference, you would likely need to be sorting lists of sizes around 100,000 or one million elements. Consider the scenario in which you could only choose one of the two sorting algorithms. If you chose merge sort, you would be sacrificing performance in the low end but you would do better with large lists. Since the merge-select algorithm only improves upon the merge sort on the low end, you would have to consider the time savings with small lists. From the graph of lists of 40 elements or less, you can see that this saves 0.01 milliseconds at best. Therefore, to see a time savings of 1 second, you would have to be performing sorting operations on at least 100,000 small lists with 40 elements each. It seems unlikely to me that such intensive sorting would happen on such a large grouping of lists when more value would come from sorting a couple lists of one million elements. In other words, it would be easier to coordinate the meaning behind 4 really large lists as compared to 100,000 really small lists. 
 
